@@ -3,7 +3,7 @@ package core.basesyntax;
 public class PasswordValidator {
     public void validate(String password, String repeatPassword)
             throws PasswordValidationException {
-        if (password.equals(null) || repeatPassword.equals(null)) {
+        if (password == null || repeatPassword == null) {
             throw new PasswordValidationException("Wrong passwords");
         }
         if (password.length() < 10 || !password.equals(repeatPassword)) {
